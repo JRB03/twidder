@@ -1,0 +1,43 @@
+div {
+   font-family: monospace;
+}
+
+.header {
+   display: flex;
+   justify-content: center;
+
+   background-color: rgb(85, 172, 238);
+   border-radius: 8px;
+} .title {
+   padding: 5px;
+   margin: 5px;
+   width:fit-content;
+
+   font-family:Arial, Helvetica, sans-serif;
+   font-size: 32px;
+   font-weight: 600;
+   color: white;
+
+   border-width: 0px;
+   border-bottom: 5px;
+   border-style: double;
+} .sub-title {
+   display:flex;
+   justify-content: center;
+
+   padding:2px;
+   margin: 5px;
+
+   font-size:110%;
+   font-weight: 1000;
+   color: rgb(85, 172, 238);
+}
+
+
+.h1 {
+   font-size: medium;
+}
+.list {
+   display: flex;
+   flex: column;
+}

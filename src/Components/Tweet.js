@@ -1,4 +1,5 @@
 import React from "react";
+import '../Styles/Tweet.css';
 
 const Tweet = props => {
    return (
