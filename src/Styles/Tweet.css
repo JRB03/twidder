@@ -1,3 +1,11 @@
-div {
+.tweet-container {
+   /* display: flex; */
    font-family:monospace;
+}
+
+.likes {
+   display:flex;
+} .heart {
+   height: 30px;
+   width: 30 px;
 }
