@@ -1,11 +1,73 @@
 .tweet-container {
    /* display: flex; */
    font-family:monospace;
+   display:flex;
+   flex-flow:column;
+
+   padding: 5px;
+   margin: 8px;
+   width: 220px;
+   height: fit-content;
+
+   border-style: solid;
+   border-width: 2px;
+   border-radius: 5px;
+   border-color: lightgray;
 }
 
-.likes {
+.user {
+   display: flex;
+   width: fit-content;
+} .user-pic {
+   border-radius: 100%;
+   border-color:rgb(85, 172, 238);
+   border-style: solid;
+   border-width: 3px;
+
+   padding: 1px;
+   margin-right: 10px;
+
+   width:30px;
+   height:30px;
+} 
+
+.user-info {
    display:flex;
-} .heart {
+   flex-flow: column;
+   justify-content: flex-start;
+} .user-name {
+   flex-flow: row;
+   width:fit-content;
+   font-weight: bold;
+   margin:0px;
+   margin-top: 3px;
+} .user-tag {
+   margin:0px;
+   color:gray;
+}
+
+.content {
+   display:flex;
+   justify-content: flex-start;
+   font-size:medium;
+}
+
+
+.tweet-bottom {
+   display:flex;
+   justify-content: flex-start;
+
    height: 30px;
-   width: 30 px;
+} .tweet-interact {
+   display:flex;
+   flex-flow: row;
+   margin-left: 10px;
+} .heart {
+   height: 20px;
+   width: 20px;
+   margin-top:9px;
+   border:0px;
+} .date {
+   color: lightgray;
+   margin-left: 40px;
 }

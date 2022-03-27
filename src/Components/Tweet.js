@@ -3,25 +3,35 @@ import '../Styles/Tweet.css';
 import empty from '../Images/xheart.png';
 import loved from '../Images/oheart.png';
 
+import profile from "../Images/profile.png";
+
 const Tweet = props => {
-   const[Likes,setLikes] = useState(0);
+   const[Likes,setLikes] = useState(props.il);
    const[Heart,setHeart] = useState(false);
    const Like = () => { 
-      setHeart(!Heart);
+      setHeart(!Heart)
       Heart ? setLikes(Likes-1) : setLikes(Likes+1);
    };
 
    return (
       <div class="tweet-container">
-         <p>hey</p>
-         <p>{props.content}</p>
-         <p>{props.user}</p>
-         <p>{props.date}</p>
-         <div onClick={Like} class="likes">
-            <img class="heart" src = {Heart ? loved : empty}></img>
-            <p>{Likes}</p>
+         <div class="user">
+            <img class="user-pic" src={profile}/>
+            <div class="user-info">
+               <p class="user-name">{props.user}</p>
+               <p class="user-tag">@{props.tag}</p>
+            </div>
          </div>
-         
+
+         <p class="content">{props.content}</p>
+
+         <div class="tweet-bottom">
+            <div onClick={Like} class="tweet-interact">
+               <img class="heart" src = {Heart ? loved : empty}/>
+               <p class="likes">{Likes}</p>
+            </div>
+            <p class="date">{props.date}</p>
+         </div>
          
       </div>
    );

@@ -1,43 +1,27 @@
 div {
    font-family: monospace;
 }
-
-.header {
-   display: flex;
-   justify-content: center;
-
-   background-color: rgb(85, 172, 238);
-   border-radius: 8px;
-} .title {
-   padding: 5px;
-   margin: 5px;
-   width:fit-content;
-
-   font-family:Arial, Helvetica, sans-serif;
-   font-size: 32px;
-   font-weight: 600;
-   color: white;
-
-   border-width: 0px;
-   border-bottom: 5px;
-   border-style: double;
-} .sub-title {
+input {
    display:flex;
-   justify-content: center;
+}
+button {
+   font-family: monospace;
+   font-weight: bold;
+}
 
-   padding:2px;
-   margin: 5px;
-
-   font-size:110%;
-   font-weight: 1000;
+h2 {
    color: rgb(85, 172, 238);
 }
 
-
-.h1 {
-   font-size: medium;
-}
-.list {
-   display: flex;
-   flex: column;
+.make-container {
+   display:flex;
+} .set-content {
+   width:400px;
+   height:38px;
+} .set-date {
+   width:100px;
+   height:min-content;
+} .tweet {
+   height: 25px;
+   margin-top:14px;
 }

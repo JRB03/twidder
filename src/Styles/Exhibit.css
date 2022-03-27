@@ -1,0 +1,7 @@
+.tweets {
+   display: flex;
+   flex-flow: wrap;
+}
+input {
+   margin-left: 8px;
+}
