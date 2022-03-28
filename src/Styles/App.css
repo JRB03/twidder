@@ -1,27 +1,57 @@
 div {
    font-family: monospace;
 }
-input {
-   display:flex;
-}
-button {
-   font-family: monospace;
-   font-weight: bold;
+
+.header {
+   display: flex;
+   justify-content: space-between;
+
+   background-color: rgb(85, 172, 238);
+   border-radius: 8px;
+} .title {
+   padding: 5px;
+   padding-bottom: 1px;
+   margin: 5px;
+   width:fit-content;
+
+   font-family:Arial, Helvetica, sans-serif;
+   font-size: 32px;
+   font-weight: 600;
+   color: white;
+   text-decoration:none;
+
+   border-width: 0px;
+   border-bottom: 5px;
+   border-style: double;
+} .prof {
+   height:30px;
+   width:30px;
+
+   margin-top: 10px;
+   margin-left: 10px;
+
+   border-radius: 100%;
+   padding: 2px;
+   border-style: solid;
+   border-color: white;
+} .menu {
+   height:30px;
+   width:30px;
+
+   margin-top: 10px;
+   margin-right: 10px;
+   
+   padding: 2px;
 }
 
-h2 {
+.sub-title {
+   display:flex;
+   justify-content: center;
+
+   padding:2px;
+   margin: 5px;
+
+   font-size:110%;
+   font-weight: 1000;
    color: rgb(85, 172, 238);
-}
-
-.make-container {
-   display:flex;
-} .set-content {
-   width:400px;
-   height:38px;
-} .set-date {
-   width:100px;
-   height:min-content;
-} .tweet {
-   height: 25px;
-   margin-top:14px;
 }

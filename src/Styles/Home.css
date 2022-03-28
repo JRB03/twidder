@@ -1,0 +1,27 @@
+div {
+   font-family: monospace;
+}
+input {
+   display:flex;
+}
+button {
+   font-family: monospace;
+   font-weight: bold;
+}
+
+h2 {
+   color: rgb(85, 172, 238);
+}
+
+.make-container {
+   display:flex;
+} .set-content {
+   width:400px;
+   height:38px;
+} .set-date {
+   width:100px;
+   height:min-content;
+} .tweet {
+   height: 25px;
+   margin-top:14px;
+}
