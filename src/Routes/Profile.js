@@ -1,11 +1,19 @@
 import React from 'react';
 
 import '../Styles/Profile.css';
-import {Link} from 'react-router-dom';
 
 const Profile = () => {
    return (
       <div>
+         <p>name</p>
+         <p>tag</p>
+         <p>profile pic uploader!?</p>
+         <p>--</p>
+         <p>things that you've tweeted</p>
+         <p>things you've likes</p>
+         <p>followers</p>
+         <p>----</p>
+         <p>sign in?!</p>
       </div>
    )
 }
