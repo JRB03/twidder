@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 
-import Tweet from '../Components/Tweet.js';
 import {v4 as uuidv4} from 'uuid';
 import Exhibit from '../Components/Exhibit.js';
 

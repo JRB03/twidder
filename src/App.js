@@ -1,25 +1,35 @@
-import React, {useState} from 'react';
-import { Outlet, Link } from 'react-router-dom';
-import {v4 as uuidv4} from 'uuid';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from 'react-router-dom';
 
-import Tweet from './Components/Tweet.js';
+import Home from './Routes/Home.js';
+import Profile from './Routes/Profile.js'
+
 import user from './Images/profile.png';
-
-import Tweets from './Tweets/Tweets.js';
 
 import './Styles/App.css';
 
 const App = () => {
   return (
     <div>
-      <div class="header">
-        <Link to='profile'>{<img class="prof" src={user}></img>}</Link>
-        <Link class="title" to='home'>Twidder</Link>
-        <img class="menu"></img>
-      </div>
-      <p class="sub-title">bird haven - squack town - feather hub</p>
-      <Outlet/>
+      <Router>
+        <nav class="header">
+          <Link to='profile'>{<img class="prof" src={user}></img>}</Link>
+          <Link class="title" to=''>Twidder</Link>
+          <img class='menu'></img>
+        </nav>
+        <p class="sub-title">bird haven - squack town - feather hub</p>
+        <Routes>
+          <Route path='profile' element={<Profile/>}/>
+          <Route path='' element={<Home/>}/>
+        </Routes>
+      </Router>
     </div>
+    
   )
 }
 
