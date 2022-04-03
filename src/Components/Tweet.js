@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import '../Styles/Tweet.css';
 import empty from '../Images/xheart.png';
 import loved from '../Images/oheart.png';
@@ -12,6 +12,12 @@ const Tweet = props => {
       setHeart(!Heart)
       Heart ? setLikes(Likes-1) : setLikes(Likes+1);
    };
+
+   //after 5 seconds 50% of likeing rendered tweet
+   // useEffect( () => {
+   //    let ran = Math.random();
+   //    if(ran > 0.5) {setTimeout(Like,5000)}
+   // },[]);
 
    return (
       <div class="tweet-container">

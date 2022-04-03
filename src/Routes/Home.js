@@ -1,4 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import { db } from '../firebase.js';
+import {collection, addDoc, getDocs} from 'firebase/firestore';
 
 import {v4 as uuidv4} from 'uuid';
 import Exhibit from '../Components/Exhibit.js';
@@ -14,6 +16,17 @@ const Home = () => {
   const [usertag, setUsertag] = useState("");
   const [content, setContent] = useState("");
   const [date, setDate] = useState("");
+
+  const updateTweets = () => {
+    let temp = [];
+    getDocs(collection(db,'tweeds')).then((snapshot) => {
+      snapshot.forEach((doc) => temp.push(doc.data()));
+      setTweets(temp);
+    });
+  }
+
+  useEffect(updateTweets,[]);
+
     return (
     <div>
       <h2>Hoot your own:</h2>
@@ -29,11 +42,18 @@ const Home = () => {
       </div>
 
       <button class="tweet" style={{color: ""}} onClick={() => {
-          setTweets([{username:username,usertag:usertag,content:content,date:date,il:0,id:uuidv4()},...tweets]);
           setContent("");
+          addDoc(collection(db,'tweeds'),{
+            username:username,
+            usertag:usertag,
+            content:content,
+            date:date,
+            il:0,
+            id:uuidv4()
+          }).then(() => updateTweets);
           }}>Tweet!</button>
 
-      <h2>Your Squacked:</h2>
+      <h2>Tweed Feed:</h2>
       <Exhibit>{tweets}</Exhibit>
       <h2>Twending:</h2>
       <Exhibit>{Tweets}</Exhibit>
